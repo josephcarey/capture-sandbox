@@ -19,7 +19,29 @@
   <strong>idea spoken into Discord</strong> → typed router → GitHub issue here →
   agent PR → merge → this page updates within a minute.
 </div>
+<p id="current-date"></p>
+<p id="fun-greeting"></p>
 <p id="changes">No agent-made changes yet.</p>
 <footer>Deployed from <code>main</code> by the capture VM's pull timer.</footer>
+<script>
+  // Function to get a fun greeting
+  function getFunGreeting() {
+    const greetings = [
+      "Hello, world!",
+      "Greetings, earthling!",
+      "Hi there!",
+      "Welcome!",
+      "Hey there, friend!",
+      "Salutations!",
+      "What's up?"
+    ];
+    const randomIndex = Math.floor(Math.random() * greetings.length);
+    return greetings[randomIndex];
+  }
+
+  // Update the current date and fun greeting
+  document.getElementById('current-date').textContent = new Date().toLocaleDateString();
+  document.getElementById('fun-greeting').textContent = getFunGreeting();
+</script>
 </body>
 </html>
